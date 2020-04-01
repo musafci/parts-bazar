@@ -68,7 +68,7 @@
     <!-- <link href="{{ asset('assets/backoffice/')}}/plugins/nouislider/nouislider.min.css" rel="stylesheet" /> -->
 
     <!-- JQuery DataTable Css -->
-    <!-- <link href="{{ asset('assets/backoffice/')}}/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet"> -->
+    <link href="{{ asset('assets/backoffice/')}}/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
 
 
     <!-- Light Gallery Plugin Css -->

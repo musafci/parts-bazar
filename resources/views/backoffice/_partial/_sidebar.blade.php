@@ -34,6 +34,27 @@
                         <span>Home</span>
                     </a>
                 </li>
+
+                <li class="{{ 
+                    (request()->is('backoffice/attribute')||
+                    request()->is('backoffice/feature'))
+                    ? 'active' : '' }}">
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">view_list</i>
+                        <span>Catalog</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li class="{{ request()->is('backoffice/attribute') ? 'active' : '' }}">
+                            <a href="{{ URL::to('/backoffice/attribute') }}">Attribute</a>
+                        </li>
+                        <li class="{{ request()->is('backoffice/feature') ? 'active' : '' }}">
+                            <a href="{{ URL::to('/backoffice/feature') }}">Feature</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
                 <li class="{{ request()->is('backoffice/typography') ? 'active' : '' }}">
                     <a href="{{ URL::to('/backoffice/typography') }}">
                         <i class="material-icons">text_fields</i>

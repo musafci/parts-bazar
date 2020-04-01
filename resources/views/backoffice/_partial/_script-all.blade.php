@@ -24,7 +24,7 @@
     <!-- <script src="{{ asset('assets/backoffice/')}}/js/pages/ui/dialogs.js"></script> -->
 
 
-    @section('beforeAdminscript')
+    @section('script')
     @show
 
 
@@ -101,11 +101,8 @@
 
 
     <!-- Jquery DataTable Plugin Js -->
-    
-    <!-- <script src="{{ asset('assets/backoffice/')}}/plugins/jquery-datatable/jquery.dataTables.js"></script>
-    <script src="{{ asset('assets/backoffice/')}}/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script> -->
-
-
+    <script src="{{ asset('assets/backoffice/')}}/plugins/jquery-datatable/jquery.dataTables.js"></script>
+    <script src="{{ asset('assets/backoffice/')}}/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
     <!-- <script src="{{ asset('assets/backoffice/')}}/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
     <script src="{{ asset('assets/backoffice/')}}/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
     <script src="{{ asset('assets/backoffice/')}}/plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
@@ -149,11 +146,7 @@
     <script src="{{ asset('assets/backoffice/')}}/js/pages/charts/morris.js"></script>
     <script src="{{ asset('assets/backoffice/')}}/js/pages/medias/image-gallery.js"></script>
     <script src="{{ asset('assets/backoffice/')}}/js/pages/tables/editable-table.js"></script> -->
-    
-    
-    <!-- <script src="{{ asset('assets/backoffice/')}}/js/pages/tables/jquery-datatable.js"></script> -->
-
-
+    <script src="{{ asset('assets/backoffice/')}}/js/pages/tables/jquery-datatable.js"></script>
     <!-- <script src="{{ asset('assets/backoffice/')}}/js/pages/forms/editors.js"></script>
     <script src="{{ asset('assets/backoffice/')}}/js/pages/forms/form-wizard.js"></script>
     <script src="{{ asset('assets/backoffice/')}}/js/pages/forms/form-validation.js"></script>
@@ -166,8 +159,6 @@
     <script src="{{ asset('assets/backoffice/')}}/js/pages/ui/notifications.js"></script>
     <script src="{{ asset('assets/backoffice/')}}/js/pages/index.js"></script> -->
 
-    @section('afterAdminscript')
-    @show
 
     <!-- Demo Js -->
     <!-- <script src="{{ asset('assets/backoffice/')}}/js/demo.js"></script> -->

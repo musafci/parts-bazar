@@ -405,6 +405,8 @@ class ComposerStaticInitb25b6a1d45baf60411288e586aaf8509
     );
 
     public static $classMap = array (
+        'App\\Backoffice\\Attribute' => __DIR__ . '/../..' . '/app/Backoffice/Attribute.php',
+        'App\\Backoffice\\Feature' => __DIR__ . '/../..' . '/app/Backoffice/Feature.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -413,6 +415,8 @@ class ComposerStaticInitb25b6a1d45baf60411288e586aaf8509
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\Backoffice\\AttributeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backoffice/AttributeController.php',
+        'App\\Http\\Controllers\\Backoffice\\FeatureController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backoffice/FeatureController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',

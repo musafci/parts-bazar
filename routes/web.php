@@ -6,6 +6,28 @@ Route::prefix('backoffice')->group(function () {
         return view('backoffice.dashboard');
     });
 
+
+    //Catalog
+
+    Route::group(['namespace' => 'Backoffice'], function(){
+        Route::resource('/attribute','AttributeController');
+
+        Route::resource('/feature','FeatureController');
+    });
+
+
+    // Route::get('/attribute', function() {
+    //     return view('backoffice.catalog.attribute');
+    // });
+
+    // Route::get('/feature', function() {
+    //     return view('backoffice.catalog.feature');
+    // });
+
+
+    //End Catalog
+
+
     Route::get('/typography', function () {
         return view('backoffice.typography');
     });
