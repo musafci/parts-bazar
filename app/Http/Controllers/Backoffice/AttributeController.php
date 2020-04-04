@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Backoffice\Attribute;
 use App\Http\Requests\AttributeRequest;
 use Illuminate\Http\Request;
+use DB;
 
 class AttributeController extends Controller
 {
@@ -17,8 +18,30 @@ class AttributeController extends Controller
     public function index()
     {
         $attributes = Attribute::all();
-
         return view('backoffice.catalog.attribute',compact('attributes'));
+
+        // return view('backoffice.catalog.attribute');
+    }
+
+    public function getAttribute() 
+    {
+        return Attribute::all();
+    }
+
+    public function deleteAttribute($id) 
+    {
+        DB::table('attributes')->where('id', $id)->delete();
+
+        // $nerd = Nerd::find($id);
+        // $nerd->delete();
+        
+        return response()->json([
+            'message' => 'Attribute delete successfully!',
+        ]);
+    }
+
+    public function updateAttribute($id) {
+
     }
 
     /**
@@ -39,11 +62,13 @@ class AttributeController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name_en'           =>  'required|unique:parts_bazar',
-            'name_bn'           =>  'required|unique:parts_bazar',
-            'attribute_type'    =>  'required',
-        ]);
+        // dd($request);
+
+        // $request->validate([
+        //     'name_en'           =>  'required|unique:parts_bazar',
+        //     'name_bn'           =>  'required|unique:parts_bazar',
+        //     'attribute_type'    =>  'required',
+        // ]);
 
         $attribute = new Attribute;
 
@@ -55,7 +80,11 @@ class AttributeController extends Controller
 
         $attribute->save();
 
-        return redirect()->back()->with('success','Attribute saved successfully!');
+        return response()->json([
+            'message' => 'Attribute saved successfully!',
+        ]);
+
+        // return redirect()->back()->with('success','Attribute saved successfully!');
     }
 
     /**
@@ -90,11 +119,11 @@ class AttributeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'name_en'           =>  'required|unique:parts_bazar',
-            'name_bn'           =>  'required|unique:parts_bazar',
-            'attribute_type'    =>  'required',
-        ]);
+        // $request->validate([
+        //     'name_en'           =>  'required|unique:parts_bazar',
+        //     'name_bn'           =>  'required|unique:parts_bazar',
+        //     'attribute_type'    =>  'required',
+        // ]);
         
         $attribute = Attribute::find($id);
         

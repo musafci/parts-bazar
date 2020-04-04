@@ -23,6 +23,12 @@
     <!-- <script src="{{ asset('assets/backoffice/')}}/plugins/sweetalert/sweetalert.min.js"></script> -->
     <!-- <script src="{{ asset('assets/backoffice/')}}/js/pages/ui/dialogs.js"></script> -->
 
+    <!-- Axios.js -->
+    <script src="{{ asset('assets/backoffice/')}}/js/axios.js"></script>
+    
+    <!-- Vue.js -->
+    <script src="{{ asset('assets/backoffice/')}}/js/vue.js"></script>
+    
 
     @section('beforeAdminscript')
     @show
@@ -171,3 +177,6 @@
 
     <!-- Demo Js -->
     <!-- <script src="{{ asset('assets/backoffice/')}}/js/demo.js"></script> -->
+
+    @section('customScript')
+    @show

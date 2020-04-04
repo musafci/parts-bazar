@@ -36,8 +36,8 @@
                         @endif
 
                     <form action="{{ '/backoffice/attribute/'.$attribute->id }}" method="POST">
-                        @method('PUT')
-                        @csrf
+                        <!-- @method('PUT')
+                        @csrf -->
 
                         <div class="body">
                             <label for="name_en">Name (ENG)</label>

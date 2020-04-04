@@ -1,5 +1,10 @@
 <?php
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
 Route::prefix('backoffice')->group(function () {
 
     Route::get('/', function () {
@@ -9,21 +14,16 @@ Route::prefix('backoffice')->group(function () {
 
     //Catalog
 
-    Route::group(['namespace' => 'Backoffice'], function(){
-        Route::resource('/attribute','AttributeController');
+    Route::group(['namespace' => 'Backoffice', 'middleware' => 'auth'], function(){
 
+        Route::resource('/attribute','AttributeController');
+        Route::post('/getAttribute','AttributeController@getAttribute');
+        Route::post('/deleteAttribute/{id}','AttributeController@deleteAttribute');
+        Route::post('/updateAttribute/{id}','AttributeController@updateAttribute');
+
+        
         Route::resource('/feature','FeatureController');
     });
-
-
-    // Route::get('/attribute', function() {
-    //     return view('backoffice.catalog.attribute');
-    // });
-
-    // Route::get('/feature', function() {
-    //     return view('backoffice.catalog.feature');
-    // });
-
 
     //End Catalog
 
@@ -289,25 +289,7 @@ Route::prefix('backoffice')->group(function () {
 
 
 
+Auth::routes();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/backoffice', 'HomeController@index')->name('home');
